@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horloge Numérique - Fuseaux Horaires</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⏰ Horloge Mondiale</h1>
+            <p class="subtitle">Suivez l'heure dans différents fuseaux horaires</p>
+        </header>
+
+        <div class="controls-section">
+            <div class="control-group">
+                <label for="timezoneSelect">Ajouter un fuseau horaire:</label>
+                <select id="timezoneSelect">
+                    <option value="">-- Sélectionner un fuseau horaire --</option>
+                </select>
+                <button id="addBtn" class="btn btn-primary">+ Ajouter</button>
+            </div>
+
+            <div class="control-group">
+                <button id="format12Btn" class="btn btn-toggle active">12H</button>
+                <button id="format24Btn" class="btn btn-toggle">24H</button>
+            </div>
+
+            <button id="clearAllBtn" class="btn btn-danger">Réinitialiser</button>
+        </div>
+
+        <div class="clocks-grid" id="clocksGrid">
+            <!-- Les horloges seront ajoutées ici dynamiquement -->
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <p>Aucun fuseau horaire ajouté. Commencez par en ajouter un!</p>
+        </div>
+
+        <div class="info-section">
+            <h3>À propos</h3>
+            <p>Ajoutez vos fuseaux horaires préférés et suivez l'heure en temps réel. Les données sont automatiquement sauvegardées.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
